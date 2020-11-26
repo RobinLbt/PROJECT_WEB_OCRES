@@ -12,6 +12,7 @@ class DashboardPage extends Component {
     render() {
         return (
             <div class="main">
+                <div>
                 <section class="widget-container">
                     <TitreTile />
                     <AnciensTile />
@@ -19,7 +20,10 @@ class DashboardPage extends Component {
                     <JourneeTile />
                     <SatisfactionTile />
                 </section>
+                </div>
+                <section class="right-container">
                 <ProfilTile />
+                </section>
             </div>
         );
     }
