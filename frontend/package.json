@@ -35,6 +35,9 @@
     "@storybook/addon-actions": "^5.2.6",
     "@storybook/addon-links": "^5.2.6",
     "@storybook/addons": "^5.2.6",
-    "@storybook/react": "^5.2.6"
+    "@storybook/react": "^5.2.6",
+    "@webpack-cli/init": "^1.0.3",
+    "file-loader": "^6.2.0",
+    "webpack": "^5.7.0"
   }
 }

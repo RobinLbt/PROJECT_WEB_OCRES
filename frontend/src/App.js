@@ -8,7 +8,7 @@ import {
 import DashboardPage from './pages/dashboardPage';
 import AdminPage from './pages/adminPage';
 
-import Navbar from './components/navbar';
+import Navbar from './components/navbar/navbar';
 
 function App() {
   return (

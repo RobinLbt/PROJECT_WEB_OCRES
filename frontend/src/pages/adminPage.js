@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class AdminPage extends Component {
   render() {
     return (
-      <div>
+      <div style={{backgroundColor: "#ffffff"}}>
         <h2>ADMIN</h2>
       </div>
     );

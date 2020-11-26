@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 
-import TitreTile from '../components/titreTile';
-import AnciensTile from '../components/anciensTile';
-import SalaireTile from '../components/salaireTile';
-import JourneeTile from '../components/journeeTile';
-import SatisfactionTile from '../components/satisfactionTile';
+import TitreTile from '../components/widgets/titreTile';
+import AnciensTile from '../components/widgets/anciensTile';
+import SalaireTile from '../components/widgets/salaireTile';
+import JourneeTile from '../components/widgets/journeeTile';
+import SatisfactionTile from '../components/widgets/satisfactionTile';
 
-import ProfilTile from '../components/profilTile';
+import ProfilTile from '../components/widgets/profilTile';
 
 class DashboardPage extends Component {
     render() {

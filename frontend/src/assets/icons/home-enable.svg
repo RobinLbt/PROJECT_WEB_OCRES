@@ -1,0 +1,13 @@
+<svg id="presentation-board-text-chart-graph" xmlns="http://www.w3.org/2000/svg" width="46.031" height="46.031" viewBox="0 0 46.031 46.031">
+  <g id="Groupe_6" data-name="Groupe 6" transform="translate(5.451 6.057)">
+    <path id="Tracé_42" data-name="Tracé 42" d="M12,16v7.672" transform="translate(5.564 8.63)" fill="none" stroke="#275ef6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+    <path id="Tracé_43" data-name="Tracé 43" d="M8,25.59,11.567,16" transform="translate(1.893 8.63)" fill="none" stroke="#275ef6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+    <path id="Tracé_44" data-name="Tracé 44" d="M17.707,25.59,14.14,16" transform="translate(7.529 8.63)" fill="none" stroke="#275ef6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+    <path id="Tracé_45" data-name="Tracé 45" d="M7.5,13.836V10" transform="translate(1.434 3.123)" fill="none" stroke="#275ef6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+    <path id="Tracé_46" data-name="Tracé 46" d="M10.5,16.59V7" transform="translate(4.187 0.369)" fill="none" stroke="#275ef6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+    <path id="Tracé_47" data-name="Tracé 47" d="M13.5,14.754V9" transform="translate(6.941 2.205)" fill="none" stroke="#275ef6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+    <path id="Tracé_48" data-name="Tracé 48" d="M16.5,16.177V7.45" transform="translate(9.695 0.782)" fill="none" stroke="#275ef6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+    <rect id="Rectangle_9" data-name="Rectangle 9" width="35" height="25" rx="2" transform="translate(-0.451 -0.39)" fill="none" stroke="#275ef6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+  </g>
+  <path id="Tracé_49" data-name="Tracé 49" d="M0,0H46.031V46.031H0Z" fill="none"/>
+</svg>
