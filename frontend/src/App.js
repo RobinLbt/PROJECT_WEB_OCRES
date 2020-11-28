@@ -25,7 +25,6 @@ class App extends Component {
         },
         "entreprises": [{
           "nom": "BlaBlaCar",
-          "debut": new Date('2018'),
           "poste": [
             {
               "nom": "SWE",
@@ -49,8 +48,20 @@ class App extends Component {
           "trajet": [120,220],
           "satisfaction": [
             {
-              "date": new Date('2019'),
-              "valeur": 5,
+              "date": "2017-02-02",
+              "valeur": 2,
+            },
+            {
+              "date": "2017-02-03",
+              "valeur": 1,
+            },
+            {
+              "date": "2017-02-04",
+              "valeur": 4,
+            },
+            {
+              "date": "2017-02-05",
+              "valeur": 3,
             }
           ]
         },
