@@ -46,14 +46,14 @@ class App extends Component {
               "date": new Date('2019'),
             }
           ],
-          "trajet": [120],
+          "trajet": [120,220],
           "satisfaction": [
             {
               "date": new Date('2019'),
               "valeur": 5,
             }
           ]
-        }
+        },
         ]
       }
     }

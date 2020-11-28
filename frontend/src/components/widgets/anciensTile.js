@@ -18,11 +18,11 @@ class AnciensTile extends Component {
         return [years,months];
     }
 
-
+    
     render() {
         var anciennes = this.props.positions;
-        var total = this.props.positions.reverse();
         anciennes.pop();
+        var total = this.props.positions.reverse();
         console.log(anciennes);
         return (
             <div style={{ flex: "1", textAlign: "left" }}>
