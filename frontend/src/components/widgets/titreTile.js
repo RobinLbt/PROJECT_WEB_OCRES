@@ -3,8 +3,11 @@ import React, { Component } from "react";
 class TitreTile extends Component {
     render() {
         return (
-            <div style={{flex: "1"}}>
-                <h2>titre</h2>
+            <div style={{flex: "1",textAlign:"left"}}>
+                <p>Poste actuel</p>
+                <h1>{this.props.poste.nom}</h1>
+                <p>Entreprise</p>
+                <h1 style={{color: "#111111"}}>{this.props.entreprise}</h1>
             </div>
         );
     }

@@ -1,0 +1,48 @@
+.emotion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 5rem;
+    text-align: center;
+    padding: 1rem 1rem 1rem 1rem;
+    transition-duration: 500ms;
+}
+
+.emotion:hover{
+    -webkit-box-shadow: 0px 4px 20px 1px rgba(39,94,246,0.14); 
+    box-shadow: 0px 4px 20px 1px rgba(39,94,246,0.14);
+}
+
+/* Code provenant de: https://stackoverflow.com/questions/17629286/css-vertical-line-between-bullets-in-an-unordered-list */
+
+ul.positions li {
+    position:relative;
+    margin-bottom: 0;
+    padding-bottom: 2.5em;
+    list-style: none;
+}
+
+ul.positions li:after {
+    content: url('../../assets/icons/bullet.png');
+    position: absolute;
+    left: -22px; 
+    top: 0px;
+}
+
+ul.positions li:before {
+    content:"";
+    position: absolute;
+    left: -18px; /* adjust manually */
+    border-left: 4px solid #DEDEDE;
+    height: 100%;
+    width: 1px;
+}
+
+ul.positions li:first-child:before {
+   top: 6px; /* moves the line down so that it disappears under the bullet. Adjust manually */
+}
+
+ul.positions li:last-child:before {
+   height: 6px; /* shorten the line so it goes only up to the bullet. Is equal to first-child:before's top */
+}
