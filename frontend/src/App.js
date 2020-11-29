@@ -28,7 +28,7 @@ class App extends Component {
           "poste": [
             {
               "nom": "SWE",
-              "date": "2015-11-28",
+              "date": "2015-10-28",
             },
             {
               "nom": "Product Owner",

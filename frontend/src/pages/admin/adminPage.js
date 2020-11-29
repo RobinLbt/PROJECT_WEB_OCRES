@@ -16,13 +16,13 @@ class AdminPage extends Component {
     return (
       <div className="main" style={{ backgroundColor: "#ffffff" }}>
         <div className="form-container">
-        <FormChangement/>
-        <FormNouveau/>
+          <FormChangement />
+          <FormNouveau />
         </div>
         <section className="right-container">
-          <div style={{ height: "100%", width: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between", alignItems: "center" }}>
+          <div className="right-subcontainer">
             <ProfilTile
-            key={3}
+              key={3}
               profil={this.props.data.profil}
               salaire={this.props.data.entreprises[this.props.data.entreprises.length - 1].salaires[this.props.data.entreprises[this.props.data.entreprises.length - 1].salaires.length - 1]}
               temps={this.props.data.entreprises[this.props.data.entreprises.length - 1].poste[this.props.data.entreprises[this.props.data.entreprises.length - 1].poste.length - 1].date}

@@ -11,7 +11,7 @@ class ProfilTile extends Component {
                 {/* <p>{`./../../assets/images/${this.props.profil.profilPic}`}</p> */}
                 <h2 style={{ color: "#275EF6" }}>{this.props.profil.nom} {this.props.profil.prenom}</h2>
                 <p>salaire</p>
-                <h2>{this.props.salaire.montant}€</h2>
+                <h2>{this.props.salaire.montant}€ <span style={{fontSize:"1rem"}}>net</span></h2>
                 <p>temps position actuelle</p>
                 <h2>{Math.floor(-DateTime.fromISO(this.props.temps).diffNow('years').years)} ans {Math.floor(-DateTime.fromISO(this.props.temps).diffNow('months').months - Math.floor(-DateTime.local().minus({years:  Math.floor(-DateTime.fromISO(this.props.temps).diffNow('years').years)}).diffNow('months').months))} mois</h2>
             </div>

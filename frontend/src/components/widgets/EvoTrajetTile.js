@@ -13,7 +13,6 @@ class EvoTrajetTile extends Component {
 
 
     render() {
-        console.log(this.data1);
         return (
             <div style={{ flex: "1", textAlign: "left", display: "flex", flexDirection: "column", alignItems: "center",height:"33.3vh",maxHeight:"33.3vh" }}>
                 <div style={{ width: "100%" }}>

@@ -17,7 +17,6 @@ class DashboardPage extends Component {
         this.props.data.entreprises.forEach(
             (entreprise) => entreprise.trajets.forEach((temps) => tdt.push(temps))
         );
-        console.log(tdt);
         return tdt;
     }
 
@@ -39,8 +38,6 @@ class DashboardPage extends Component {
 
 
     render() {
-
-        console.log("### DashboardPage props", this.props.data.entreprises);
 
         this.getTempsDeTrajet();
         return (
@@ -64,7 +61,7 @@ class DashboardPage extends Component {
                     </section>
                 </div>
                 <section className="right-container">
-                    <div style={{ height: "100%", width: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between", alignItems: "center" }}>
+                    <div className="right-subcontainer">
                         <ProfilTile 
                             key={2}
                             profil={this.props.data.profil}
