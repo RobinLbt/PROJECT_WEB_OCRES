@@ -5,8 +5,6 @@ import {
   HashRouter
 } from "react-router-dom";
 
-import { TransitionGroup, CSSTransition } from "react-transition-group";
-
 import DashboardPage from './pages/dashboard/dashboardPage';
 import AdminPage from './pages/admin/adminPage';
 

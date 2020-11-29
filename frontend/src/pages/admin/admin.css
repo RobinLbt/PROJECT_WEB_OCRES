@@ -47,6 +47,7 @@
     transition-duration: 200ms;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    margin-right: 1rem;
   }
 
   button:active{

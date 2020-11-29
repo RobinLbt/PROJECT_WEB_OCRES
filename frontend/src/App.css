@@ -18,7 +18,7 @@ p{
   grid-template-areas: "navbar main";
   width: 100vw;
   height: 100vh;
-  background-color: #FCFCFC;  
+  background-color: #ffffff;  
   padding: 0;
   margin: 0;
 }
@@ -39,14 +39,12 @@ p{
   flex-direction: row;
   padding: 0;
   margin: 0;
-  /* overflow: hidden; */
 }
 
 .widget-container{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  background-color: blue;
   padding: 0;
   margin: 0;
 }
@@ -58,7 +56,6 @@ p{
   max-width: 100%;
   background-color: #ffffff;
   padding: 10px 20px 10px 20px;
-  /* border: 1px solid black; */
 }
 
 .double-widget-subcontainer{
@@ -92,20 +89,24 @@ p{
   }
   
   .widget-container > *{
-    min-width: 30em;
-    max-width: 100%;
+    min-width: 20%;
+    max-width: 80%;
+  }
+
+  .grid-container{
+    width: 100%;
   }
   
   .right-container{
-    width: 100%;
+    width: 80%;
     margin-left: 0;
     -webkit-box-shadow: none; 
     box-shadow: none;
   }
   
   .double-widget-subcontainer{
-    min-width: 60em;
-    max-width: 100%;
+    min-width: 40%;
+    max-width: 80%;
   }
 
   .right-subcontainer{
@@ -122,15 +123,17 @@ p{
 
 @media only screen and (max-width: 800px){
   .widget-container > *, .double-widget-subcontainer,.right-container{
-    min-width: 100%;
-    width: 100vw;
+    min-width: 50%;
+    width: 80vw;
     max-width: 100%;
   }
+  
   
   .grid-container{
     grid-template-columns: 1fr;
     grid-template-rows: 100px 1fr;
     grid-template-areas: "navbar" "main";
+    width: 100%;
   }
   
   .navbar{
@@ -179,29 +182,4 @@ p{
   font-weight: 300;
   font-style: normal;
   font-display: swap;
-}
-
-.slide-enter,
-.slide-exit {
-  transition: transform 1000ms ease-out;
-}
-
-.slide-enter {
-  transform: translateX(100%);
-}
-
-.slide-enter.slide-enter-active {
-  transform: translateX(0%);
-}
-
-.slide-exit {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  transform: translateX(0%);
-}
-
-.slide-exit-active {
-  transform: translateX(-100%);
 }
