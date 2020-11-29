@@ -39,8 +39,8 @@ Paquets NPM utilisées:
 **J'ai décidé de ne pas utiliser Bootstrap** afin d'apprendre à faire des sites responsives en CSS pur sans dépendre d'un framework.
 Pour cela, j'ai utilisé une grille CSS et des conteneurs flex.
 
-J'ai commencé par créer la hiéarchie des composants à l'aide du prototype.
-Chaque composant ne contenait que son nom et une couleur de fond pour les reconnaitre et les agencés.
+J'ai commencé par créer la hiérarchie des composants à l'aide du prototype.
+Chaque composant ne contenait que son nom et une couleur de fond pour les reconnaitre et les agencer plus facilement.
 
 J'ai ensuite travailler le responsive en utilisant une grille CSS et des conteneurs flex:
 
@@ -63,9 +63,19 @@ La partie backend sera codée en **Javascript** avec l'aide de **Node.JS** en ut
 
 1) Cloner ce repo.
 
-2) Exécuter la commande npm install dans **/front**
+2) Installer les paquets nécessaires en éxécutant la commande suivante:
+    ``` bash
+    npm install
+    ``` 
+    dans **/front**
 
-3) Exécuter la commande npm start dans **/front**
+3) Lancer le projet en éxécutant la commande suivante:
+    ``` bash
+    npm start
+    ``` 
+    dans **/front**
+
+4) Se rendre sur [localhost](http://localhost:3000/#/)
 
 ## Auteurs
 
