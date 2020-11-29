@@ -52,13 +52,13 @@ p{
 }
 
 .widget-container > *{
-  height: 33.3vh;
+  height: 31vh;
   min-height: 20em;
   min-width: 20em;
   max-width: 100%;
   background-color: #ffffff;
-  padding: 40px 20px 40px 20px;
-  /* border: 1px solid black; */
+  padding: 10px 20px 10px 20px;
+  border: 1px solid black;
 }
 
 .double-widget-subcontainer{

@@ -59,9 +59,11 @@ class SatisfactionTile extends Component {
 
     render() {
         return (
-            <div style={{ flex: "1",textAlign:"left" }}>
+            <div style={{ flex: "1",textAlign:"left",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"}}>
+                <section style={{width:"100%",textAlign:"left"}}>
                 <h2>Evolution satisfaction</h2>
-                <ResponsiveContainer width="80%" height={300}>
+                </section>
+                <ResponsiveContainer width="80%" height="60%">
                     <LineChart
                         margin={{ top: 0, right: 40, left: 40, bottom: 0  }}
                         data={this.data}>

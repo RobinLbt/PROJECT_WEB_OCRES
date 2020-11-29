@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 
-import TitreTile from '../components/widgets/titreTile';
-import AnciensTile from '../components/widgets/anciensTile';
-import SalaireTile from '../components/widgets/salaireTile';
-import JourneeTile from '../components/widgets/journeeTile';
-import SatisfactionTile from '../components/widgets/satisfactionTile';
+import TitreTile from '../../components/widgets/titreTile';
+import AnciensTile from '../../components/widgets/anciensTile';
+import SalaireTile from '../../components/widgets/salaireTile';
+import JourneeTile from '../../components/widgets/journeeTile';
+import SatisfactionTile from '../../components/widgets/satisfactionTile';
 
 
-import ProfilTile from '../components/widgets/profilTile';
-import EvoTrajetTile from '../components/widgets/EvoTrajetTile';
+import ProfilTile from '../../components/widgets/profilTile';
+import EvoTrajetTile from '../../components/widgets/EvoTrajetTile';
 
 class DashboardPage extends Component {
 
@@ -49,6 +49,7 @@ class DashboardPage extends Component {
                 <div>
                     <section class="widget-container">
                         <TitreTile
+                            key={1}
                             entreprise={this.props.data.entreprises[this.props.data.entreprises.length - 1].nom}
                             poste={this.props.data.entreprises[this.props.data.entreprises.length - 1].poste[this.props.data.entreprises[this.props.data.entreprises.length - 1].poste.length - 1]} />
                         <AnciensTile
@@ -65,7 +66,8 @@ class DashboardPage extends Component {
                 </div>
                 <section class="right-container">
                     <div style={{ height: "100%", width: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between", alignItems: "center" }}>
-                        <ProfilTile
+                        <ProfilTile 
+                            key={1}
                             profil={this.props.data.profil}
                             salaire={this.props.data.entreprises[this.props.data.entreprises.length - 1].salaires[this.props.data.entreprises[this.props.data.entreprises.length - 1].salaires.length - 1]}
                             temps={this.props.data.entreprises[this.props.data.entreprises.length - 1].poste[this.props.data.entreprises[this.props.data.entreprises.length - 1].poste.length - 1].date}

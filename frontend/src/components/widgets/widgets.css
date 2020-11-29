@@ -9,6 +9,30 @@
     transition-duration: 200ms;
 }
 
+.emoji{
+    margin: 0;
+}
+
+#un{
+    font-size: 4rem;
+}
+
+#deux{
+    font-size: 4.5rem;
+}
+
+#trois{
+    font-size: 5rem;
+}
+
+#quatre{
+    font-size: 4.5rem;
+}
+
+#cinq{
+    font-size: 4rem;
+}
+
 .emotion:hover{
     -webkit-box-shadow: 0px 4px 20px 1px rgba(39,94,246,0.14); 
     box-shadow: 0px 4px 20px 1px rgba(39,94,246,0.14);
@@ -46,3 +70,33 @@ ul.positions li:first-child:before {
 ul.positions li:last-child:before {
    height: 6px; /* shorten the line so it goes only up to the bullet. Is equal to first-child:before's top */
 }
+
+@media only screen and (max-width: 2100px){
+  
+    #un{
+        font-size: 3rem;
+    }
+    
+    #deux{
+        font-size: 3.5rem;
+    }
+    
+    #trois{
+        font-size: 4rem;
+    }
+    
+    #quatre{
+        font-size: 3.5rem;
+    }
+    
+    #cinq{
+        font-size: 3rem;
+    
+  }
+}
+
+@media only screen and (max-width: 800px){
+   #un,#deux,#trois,#quatre,#cinq{
+       font-size: 2rem;
+   }
+  }

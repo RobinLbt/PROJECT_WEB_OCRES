@@ -7,8 +7,8 @@ import {
 
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
-import DashboardPage from './pages/dashboardPage';
-import AdminPage from './pages/adminPage';
+import DashboardPage from './pages/dashboard/dashboardPage';
+import AdminPage from './pages/admin/adminPage';
 
 import Navbar from './components/navbar/navbar';
 
@@ -70,6 +70,10 @@ class App extends Component {
             {
               "date": "2017-02-05",
               "valeur": 3,
+            },
+            {
+              "date": "2018-07-13",
+              "valeur": 5,
             }
           ]
         },
@@ -86,7 +90,7 @@ class App extends Component {
           <div class="grid-container">
             <Navbar />
             <Route exact path="/" render={(props) => <DashboardPage {...props} data={this.state.data} />} />
-            <Route path="/admin" component={AdminPage} />
+            <Route path="/admin" render={(props) => <AdminPage {...props} data={this.state.data} />} />
           </div>
         </div>
       </HashRouter>
