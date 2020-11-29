@@ -36,7 +36,7 @@ class App extends Component {
             },
             {
               "nom": "Product Manager",
-              "date": "2020-05-15",
+              "date": "2019-05-15",
             }
           ],
           "salaires": [
@@ -53,7 +53,7 @@ class App extends Component {
               "date": "2019-08-24",
             }
           ],
-          "trajets": [120,220],
+          "trajets": [23,75],
           "satisfaction": [
             {
               "date": "2017-02-02",

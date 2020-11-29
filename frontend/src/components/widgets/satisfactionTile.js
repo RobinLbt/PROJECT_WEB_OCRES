@@ -69,7 +69,7 @@ class SatisfactionTile extends Component {
                         data={this.data}>
                         <XAxis dataKey="date" stroke="#275EF6" axisLine={false} tickLine={false}>
                         </XAxis>
-                        <Line type="monotone" dataKey="humeur" stroke="none" dot={<Emoji />} />
+                        <Line isAnimationActive={false} type="monotone" dataKey="humeur" stroke="none" dot={<Emoji />} />
                         <ReferenceLine y={1} stroke="#DEDEDE" strokeDasharray="3 3" />
                         <ReferenceLine y={2} stroke="#DEDEDE" strokeDasharray="3 3" />
                         <ReferenceLine y={3} stroke="#DEDEDE" strokeDasharray="3 3" />
