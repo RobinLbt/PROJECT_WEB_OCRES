@@ -15,9 +15,9 @@ import {
 class Navbar extends Component {
   render() {
     return (
-      <div class="navbar">
-        <NavLink to="/">{this.props.location.pathname == '/' ? <img className="svg-navbar" src={homeenablesvg}></img>  : <img className="svg-navbar" src={homesvg}></img>}</NavLink>
-        <NavLink to= "/admin">{this.props.location.pathname == '/admin' ? <img className="svg-navbar" src={adminenablesvg}></img> : <img className="svg-navbar" src={adminsvg}></img>}</NavLink>
+      <div className="navbar">
+        <NavLink to="/">{this.props.location.pathname === '/' ? <img className="svg-navbar" src={homeenablesvg} alt="home"></img>  : <img className="svg-navbar" src={homesvg} alt="home"></img>}</NavLink>
+        <NavLink to= "/admin">{this.props.location.pathname === '/admin' ? <img className="svg-navbar" src={adminenablesvg} alt="admin"></img> : <img className="svg-navbar" src={adminsvg} alt="admin"></img>}</NavLink>
       </div>
     );
   }

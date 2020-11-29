@@ -21,12 +21,12 @@ class SalaireTile extends Component {
                         <AreaChart
                             margin={{ top: 0, right: 40, left: 40, bottom: 0 }}
                             data={this.data}>
-                            <XAxis dataKey="date" stroke="#275EF6" axisLine={false} tickLine={false} width="40%">
+                            <XAxis dataKey="date" stroke="#275EF6" axisLine={false} tickLine={false}>
                             </XAxis>
                             <YAxis />
                             <Tooltip />
                             <Area type="monotone" dataKey="montant" stroke="#275EF6" width={50} fill="#275EF6" dot={true} />
-                            {this.data.map((d) => <ReferenceLine y={d.montant} stroke="#DEDEDE" strokeDasharray="3 3" />)}
+                            {this.data.map((d) => <ReferenceLine key={d.montant} y={d.montant} stroke="#DEDEDE" strokeDasharray="3 3" />)}
                         </AreaChart>
                     </ResponsiveContainer>
             </div>

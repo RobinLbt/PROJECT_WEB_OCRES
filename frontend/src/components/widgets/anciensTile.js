@@ -26,7 +26,7 @@ class AnciensTile extends Component {
         return (
             <div style={{ flex: "1", textAlign: "left" }}>
                 <h2>Anciennes positions</h2>
-                <ul class="positions">
+                <ul className="positions">
                     {anciennes.reverse().map((position,i) =>
                     <li key={position.nom}> 
                     <p style={{color: "black",fontWeight:"500",margin:"0"}}>{position.nom}</p>

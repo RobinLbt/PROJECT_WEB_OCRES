@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BarChart, Bar, XAxis, ResponsiveContainer, Label } from 'recharts';
+import { BarChart, Bar, XAxis, ResponsiveContainer } from 'recharts';
 
 
 class EvoTrajetTile extends Component {

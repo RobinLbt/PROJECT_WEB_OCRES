@@ -10,24 +10,24 @@ class JourneeTile extends Component {
                 </section>
                 <div style={{ display: "flex", flexDirection: "column", justifyContent: "space-evenly", alignItems: "center", height: "100%" }}>
                     <section style={{ display: "flex", flexDirection: "row", justifyContent: "space-evenly" }}>
-                        <div class="emotion">
-                            <p id="un" class="emoji">😓</p>
+                        <div className="emotion">
+                            <span id="un" className="emoji" role="img" aria-label="pas content">😓</span>
                             <p>Terrible</p>
                         </div>
-                        <div class="emotion">
-                            <p id="deux" class="emoji">🙁</p>
+                        <div className="emotion">
+                            <span id="deux" className="emoji" role="img" aria-label="bof">🙁</span>
                             <p>Pas bien</p>
                         </div>
-                        <div class="emotion">
-                            <p id="trois" class="emoji">😐</p>
+                        <div className="emotion">
+                            <span id="trois" className="emoji" role="img" aria-label="neutre">😐</span>
                             <p>Moyen</p>
                         </div>
-                        <div class="emoji" class="emotion">
-                            <p id="quatre" class="emoji">🙂</p>
+                        <div className="emotion">
+                            <span id="quatre" className="emoji" role="img" aria-label="bien">🙂</span>
                             <p>Bien</p>
                         </div>
-                        <div class="emoji" class="emotion">
-                            <p id="cinq" class="emoji">😄</p>
+                        <div className="emotion">
+                            <span id="cinq" className="emoji" role="img" aria-label="super">😄</span>
                             <p>Très bien</p>
                         </div>
                     </section>

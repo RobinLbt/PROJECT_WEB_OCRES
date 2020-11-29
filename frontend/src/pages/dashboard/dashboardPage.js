@@ -12,10 +12,6 @@ import EvoTrajetTile from '../../components/widgets/EvoTrajetTile';
 
 class DashboardPage extends Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     getTempsDeTrajet() {
         var tdt = [];
         this.props.data.entreprises.forEach(
@@ -45,9 +41,9 @@ class DashboardPage extends Component {
     render() {
         this.getTempsDeTrajet();
         return (
-            <div class="main">
+            <div className="main">
                 <div>
-                    <section class="widget-container">
+                    <section className="widget-container">
                         <TitreTile
                             key={1}
                             entreprise={this.props.data.entreprises[this.props.data.entreprises.length - 1].nom}
@@ -64,10 +60,10 @@ class DashboardPage extends Component {
                         />
                     </section>
                 </div>
-                <section class="right-container">
+                <section className="right-container">
                     <div style={{ height: "100%", width: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between", alignItems: "center" }}>
                         <ProfilTile 
-                            key={1}
+                            key={2}
                             profil={this.props.data.profil}
                             salaire={this.props.data.entreprises[this.props.data.entreprises.length - 1].salaires[this.props.data.entreprises[this.props.data.entreprises.length - 1].salaires.length - 1]}
                             temps={this.props.data.entreprises[this.props.data.entreprises.length - 1].poste[this.props.data.entreprises[this.props.data.entreprises.length - 1].poste.length - 1].date}

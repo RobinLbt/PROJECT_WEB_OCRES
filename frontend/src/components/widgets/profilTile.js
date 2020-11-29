@@ -7,7 +7,7 @@ class ProfilTile extends Component {
     render() {
         return (
             <div>
-                <img src={img} width="200rem" style={{marginTop: "5rem",borderRadius: "50%"}}></img>
+                <img alt="profile pic" src={img} width="200rem" style={{marginTop: "5rem",borderRadius: "50%"}}></img>
                 {/* <p>{`./../../assets/images/${this.props.profil.profilPic}`}</p> */}
                 <h2 style={{ color: "#275EF6" }}>{this.props.profil.nom} {this.props.profil.prenom}</h2>
                 <p>salaire</p>

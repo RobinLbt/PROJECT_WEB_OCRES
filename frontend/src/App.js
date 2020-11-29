@@ -87,7 +87,7 @@ class App extends Component {
     return (
       <HashRouter>
         <div className="App">
-          <div class="grid-container">
+          <div className="grid-container">
             <Navbar />
             <Route exact path="/" render={(props) => <DashboardPage {...props} data={this.state.data} />} />
             <Route path="/admin" render={(props) => <AdminPage {...props} data={this.state.data} />} />
