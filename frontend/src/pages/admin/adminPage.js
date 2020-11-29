@@ -10,6 +10,9 @@ import TitreTile from '../../components/widgets/titreTile';
 
 class AdminPage extends Component {
   render() {
+
+    console.log("### AdminPage props", this.props.data.entreprises);
+
     return (
       <div className="main" style={{ backgroundColor: "#ffffff" }}>
         <div className="form-container">

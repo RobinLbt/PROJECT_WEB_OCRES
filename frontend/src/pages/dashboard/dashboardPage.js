@@ -39,6 +39,9 @@ class DashboardPage extends Component {
 
 
     render() {
+
+        console.log("### DashboardPage props", this.props.data.entreprises);
+
         this.getTempsDeTrajet();
         return (
             <div className="main">

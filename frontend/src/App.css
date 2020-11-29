@@ -58,7 +58,7 @@ p{
   max-width: 100%;
   background-color: #ffffff;
   padding: 10px 20px 10px 20px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 .double-widget-subcontainer{
@@ -158,3 +158,27 @@ p{
   font-display: swap;
 }
 
+.slide-enter,
+.slide-exit {
+  transition: transform 1000ms ease-out;
+}
+
+.slide-enter {
+  transform: translateX(100%);
+}
+
+.slide-enter.slide-enter-active {
+  transform: translateX(0%);
+}
+
+.slide-exit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: translateX(0%);
+}
+
+.slide-exit-active {
+  transform: translateX(-100%);
+}

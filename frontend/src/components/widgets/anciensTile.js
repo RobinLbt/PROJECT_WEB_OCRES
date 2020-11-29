@@ -20,8 +20,16 @@ class AnciensTile extends Component {
 
     
     render() {
-        var anciennes = this.props.positions;
+        if (this.props.positions == null || this.props.positions.length < 2) {
+            return (<></>);
+        }
+
+        const anciennes = [...this.props.positions];
         anciennes.pop();
+
+        const firstPoste = this.props.positions[0];
+        const lastPoste = this.props.positions[this.props.positions.length - 1];
+
         console.log(anciennes);
         return (
             <div style={{ flex: "1", textAlign: "left" }}>
@@ -30,7 +38,7 @@ class AnciensTile extends Component {
                     {anciennes.reverse().map((position,i) =>
                     <li key={position.nom}> 
                     <p style={{color: "black",fontWeight:"500",margin:"0"}}>{position.nom}</p>
-                    {/* <p>{this.getTempsPosition(position.date,this.props.positions[0].date)[0]} ans {this.getTempsPosition(position.date,this.props.positions.reverse()[0].date)[1]} mois</p> */}
+                    <p>{this.getTempsPosition(position.date,this.props.positions[0].date)[0]} ans {this.getTempsPosition(position.date,this.props.positions.reverse()[0].date)[1]} mois</p>
                     <p>(Il y a {this.getDepuisPosition(position.date)[0]} ans et {this.getDepuisPosition(position.date)[1]} mois)</p>
                     <p></p>
                     </li>)}
