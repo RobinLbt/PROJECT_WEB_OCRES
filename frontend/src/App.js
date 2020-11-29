@@ -39,13 +39,21 @@ class App extends Component {
               "date": "2020-05-15",
             }
           ],
-          "salaire": [
+          "salaires": [
+            {
+              "montant": 2130,
+              "date": "2017-02-02",
+            },
             {
               "montant": 3652,
-              "date": new Date('2019'),
+              "date": "2018-05-10",
+            },
+            {
+              "montant": 4259,
+              "date": "2019-08-24",
             }
           ],
-          "trajet": [120,220],
+          "trajets": [120,220],
           "satisfaction": [
             {
               "date": "2017-02-02",

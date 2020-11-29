@@ -19,7 +19,7 @@ class DashboardPage extends Component {
     getTempsDeTrajet() {
         var tdt = [];
         this.props.data.entreprises.forEach(
-            (entreprise) => entreprise.trajet.forEach((temps) => tdt.push(temps))
+            (entreprise) => entreprise.trajets.forEach((temps) => tdt.push(temps))
         );
         console.log(tdt);
         return tdt;
@@ -31,6 +31,14 @@ class DashboardPage extends Component {
             (entreprise) => entreprise.satisfaction.forEach((day) => days.push(day))
         );
         return days;
+    }
+
+    getSalaires() {
+        var salaires = [];
+        this.props.data.entreprises.forEach(
+            (entreprise) => entreprise.salaires.forEach((s) => salaires.push(s))
+        );
+        return salaires;
     }
 
 
@@ -46,7 +54,9 @@ class DashboardPage extends Component {
                         <AnciensTile
                             positions={this.props.data.entreprises[this.props.data.entreprises.length - 1].poste}
                         />
-                        <SalaireTile />
+                        <SalaireTile
+                            salaires={this.getSalaires()}
+                        />
                         <JourneeTile />
                         <SatisfactionTile
                             days={this.getSatisfaction()}
@@ -54,15 +64,15 @@ class DashboardPage extends Component {
                     </section>
                 </div>
                 <section class="right-container">
-                    <div style={{height:"100%",width:"100%",display:"flex",flexDirection:"column",justifyContent:"space-between",alignItems:"center"}}>
-                    <ProfilTile
-                        profil={this.props.data.profil}
-                        salaire={this.props.data.entreprises[this.props.data.entreprises.length - 1].salaire[this.props.data.entreprises[this.props.data.entreprises.length - 1].salaire.length - 1]}
-                        temps={this.props.data.entreprises[this.props.data.entreprises.length - 1].poste[this.props.data.entreprises[this.props.data.entreprises.length - 1].poste.length - 1].date}
-                    />
-                    <EvoTrajetTile
-                        tempsTrajet={this.getTempsDeTrajet()}
-                    />
+                    <div style={{ height: "100%", width: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between", alignItems: "center" }}>
+                        <ProfilTile
+                            profil={this.props.data.profil}
+                            salaire={this.props.data.entreprises[this.props.data.entreprises.length - 1].salaires[this.props.data.entreprises[this.props.data.entreprises.length - 1].salaires.length - 1]}
+                            temps={this.props.data.entreprises[this.props.data.entreprises.length - 1].poste[this.props.data.entreprises[this.props.data.entreprises.length - 1].poste.length - 1].date}
+                        />
+                        <EvoTrajetTile
+                            tempsTrajet={this.getTempsDeTrajet()}
+                        />
                     </div>
                 </section>
             </div>
