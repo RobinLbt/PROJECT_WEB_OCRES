@@ -57,7 +57,7 @@ Finalement, j'ai réalisé les composants individuellement.
 
 ### La partie backend
 
-La partie backend sera codée en **Javascript** avec l'aide de **Node.JS** en utilisant une base de donnée **MongoDB** (Document-based).
+La partie backend sera codée en **Javascript** avec l'aide de **Node.JS** (**Express**) en utilisant une base de donnée **MongoDB** (Document-based).
 
 ### Comment mettre en route notre projet
 
