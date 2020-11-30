@@ -28,8 +28,8 @@ class SalaireTile extends Component {
 
         return (
             <div style={{display:"inline-block",marginLeft:"1rem"}}>
-                <p style={{ color: sign == "+" ? "green" : "red", display:"inline-block",fontWeight:"bold"}}>{sign}{result.toString()}%</p>
-                {sign == "+" ? 
+                <p style={{ color: sign === "+" ? "green" : "red", display:"inline-block",fontWeight:"bold"}}>{sign}{result.toString()}%</p>
+                {sign === "+" ? 
                 <img style={{display:"inline-block",transform:"translateY(0.8em)"}} src={Haut} alt="fleche en haut"></img>
                 : <img style={{display:"inline-block",transform:"translateY(0.8em)"}} src={Bas} alt="fleche en bas"></img>}
             </div>
