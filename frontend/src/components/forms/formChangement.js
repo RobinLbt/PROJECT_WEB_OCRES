@@ -1,6 +1,18 @@
 import React, { Component } from "react";
 
 class FormChangement extends Component {
+    MaJ(post){
+        
+        var requestOptions ={
+            
+        };
+        fetch('url', requestOptions)
+        .then( res => {
+          const info = res.json;
+          console.log(info);
+        })
+        .catch(err => console.log('soucis lors de la recuperation de la data error: '+ err))
+    }
     render() {
         return (
             <div>

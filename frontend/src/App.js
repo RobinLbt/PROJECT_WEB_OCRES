@@ -14,6 +14,15 @@ class App extends Component {
 
   constructor(props) {
     super(props);
+    var requestOptions ={
+
+    };
+    fetch('url', requestOptions)
+    .then( res => {
+      const info = res.json;
+      console.log(info);
+    })
+    .catch(err => console.log('soucis lors de la recuperation de la data error: '+ err))
     this.state = {
       data: {
         "profil": {
@@ -96,3 +105,4 @@ class App extends Component {
 }
 
 export default App;
+
