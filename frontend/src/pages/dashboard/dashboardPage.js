@@ -54,7 +54,7 @@ class DashboardPage extends Component {
                         <SalaireTile
                             salaires={this.getSalaires()}
                         />
-                        <JourneeTile />
+                        <JourneeTile ftnFetch={this.props.ftnFetch}/>
                         <SatisfactionTile
                             days={this.getSatisfaction()}
                         />

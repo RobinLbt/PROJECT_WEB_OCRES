@@ -7,10 +7,12 @@ const Emoji = (props) => {
         cx, cy, value,
     } = props;
 
+    
+
     if (value === 1) {
         return (
             <svg>
-                <text fontSize="1.5rem" textAnchor="middle" x={cx - 5} y={cy + 10}>😓</text>
+                <text fontSize="1.5rem" textAnchor="middle" x={cx - 5} y={cy + 10} >😓</text>
             </svg>);
     }
 
@@ -57,6 +59,8 @@ class SatisfactionTile extends Component {
         this.props.days.forEach((day) => this.data.push({ date: DateTime.fromISO(day.date).toLocaleString({ month: 'long', day: 'numeric', year: 'numeric'}), humeur: day.valeur }));
     }
 
+    
+
     render() {
         return (
             <div style={{ flex: "1",textAlign:"left",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"}}>
@@ -76,6 +80,7 @@ class SatisfactionTile extends Component {
                         <ReferenceLine y={4} stroke="#DEDEDE" strokeDasharray="3 3" />
                         <ReferenceLine y={5} stroke="#DEDEDE" strokeDasharray="3 3" />
                     </LineChart>
+                   
                 </ResponsiveContainer>
             </div>
         );

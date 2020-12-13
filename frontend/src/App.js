@@ -14,80 +14,112 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-    var requestOptions ={
-
-    };
-    fetch('url', requestOptions)
-    .then( res => {
-      const info = res.json;
-      console.log(info);
-    })
-    .catch(err => console.log('soucis lors de la recuperation de la data error: '+ err))
+    
     this.state = {
       data: {
-        "profil": {
-          "nom": "Labrot",
-          "prenom": "Robin",
-          "profilPic": "photo.jpg",
+        profil: {
+          nom: "Labrot",
+          prenom: "Robin",
+          profilPic: "photo.jpg",
         },
-        "entreprises": [{
-          "nom": "BlaBlaCar",
-          "poste": [
+        entreprises: [{
+          nom: "BlaBlaCar",
+          poste: [
+            
             {
-              "nom": "SWE",
-              "date": "2015-10-28",
+              nom: "SWE",
+              date: "2015-10-28",
             },
-            {
-              "nom": "Product Owner",
-              "date": "2017-02-04",
-            },
-            {
-              "nom": "Product Manager",
-              "date": "2019-05-15",
-            }
+            
           ],
-          "salaires": [
+          salaires: [
             {
-              "montant": 2130,
-              "date": "2017-02-02",
+              montant: 2130,
+              date: "2017-02-02",
             },
-            {
-              "montant": 3652,
-              "date": "2018-05-10",
-            },
-            {
-              "montant": 4259,
-              "date": "2019-08-24",
-            }
+           
           ],
-          "trajets": [23,75],
-          "satisfaction": [
+          trajets: [],
+          satisfaction: [
             {
-              "date": "2017-02-02",
-              "valeur": 2,
+              date: "2017-02-02",
+              valeur: 2,
             },
-            {
-              "date": "2017-02-03",
-              "valeur": 1,
-            },
-            {
-              "date": "2017-02-04",
-              "valeur": 4,
-            },
-            {
-              "date": "2017-02-05",
-              "valeur": 3,
-            },
-            {
-              "date": "2018-07-13",
-              "valeur": 5,
-            }
+            
           ]
         },
         ]
       }
     }
+    
   }
+  componentDidMount(){
+        this.fetchData();
+       
+  }
+
+  async fetchData() {
+    try{
+      var requestOptions ={
+        method: "GET",
+        headers: { 
+            'Accept' : 'application/json',
+            'Content-Type': 'application/json',
+            //'authorization': this.state.token,
+        },
+        //body: JSON.stringify(post)
+      };
+      
+      await fetch('http://localhost:7010/API_WEB_OCRES/user/allUser', requestOptions)
+      .then( async res => {
+        const info = await res.json();
+        const infoUser = info.infoUser;
+        const infoPoste = info.infoPoste;
+        
+        console.log('yo')
+        var sal=[]
+        var tra=[]
+        console.log(infoPoste.poste[1].trajet[0].temps)
+        infoPoste.poste.forEach(element => {
+          sal.push(element.salaires[0])
+          tra.push(element.trajet[0])
+        });
+        console.log('yo')
+        var elemEntreprise={
+          nom: infoPoste.nom,
+          poste: infoPoste.poste,
+          salaires: sal,
+          trajets:tra,
+          satisfaction: infoPoste.satisfaction
+        }
+        console.log('yo')
+        var entreprises=[];
+        entreprises.push(elemEntreprise)
+        console.log('yo')
+        var data2 = {
+          profil: infoUser,
+          entreprises
+          
+        }
+        //console.log(this.state)
+        console.log(data2)
+
+        this.setState({
+          data : data2
+        })
+
+        console.log(this.state)
+
+      })
+      .catch(err => console.log('soucis lors de la recuperation de la data error: '+ err))
+    }
+    catch{
+      return {error: 'Pb lors du chargment des informations de l\'utilisateur connecté'}
+    }
+  }
+
+  
+  
 
   render() {
     return (
@@ -95,8 +127,9 @@ class App extends Component {
         <div className="App">
           <div className="grid-container">
             <Navbar />
-            <Route exact path="/" render={(props) => <DashboardPage {...props} data={this.state.data} />} />
-            <Route path="/admin" render={(props) => <AdminPage {...props} data={this.state.data} />} />
+            
+            <Route exact path="/" render={(props) => <DashboardPage {...props} data={this.state.data} ftnFetch={this.fetchData}/>} />
+            <Route path="/admin" render={(props) => <AdminPage {...props} data={this.state.data} ftnFetch={this.fetchData}/>} />
           </div>
         </div>
       </HashRouter>

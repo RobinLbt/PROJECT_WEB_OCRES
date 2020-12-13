@@ -7,10 +7,10 @@ const uniqueValidator = require('mongoose-unique-validator');
 const user = mongoose.Schema({
     prenom: {type: String, required: true },
     nom: {type: String, required: true },
-    email: { type: String, required: true, unique: true },
-    password: { type : String, required: true },
+    //email: { type: String, required: true, unique: true },
+    //password: { type : String, required: true },
     date: { type: Date, required: true, default: Date.now },
-    urlPhoto: { type: String, required: true, default: "null" },
+    profilPic: { type: String, required: true, default: "null" },
 });
 
 //Garantie des objets uniques

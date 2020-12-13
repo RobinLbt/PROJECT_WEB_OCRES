@@ -22,7 +22,8 @@ app.use(express.static(__dirname));
 //Connexion à la base de données
 mongoose.connect("mongodb+srv://SainMar:ProjetWebOcres@cluster0.vjuft.mongodb.net/ProjetWebOcres?retryWrites=true&w=majority",
   { useNewUrlParser: true,
-    useUnifiedTopology: true })
+    useUnifiedTopology: true,
+    autoIndex: false })
   .then(() => console.log('Connexion à MongoDB réussie !'))
   .catch(() => console.log('Connexion à MongoDB échouée !'));
 
@@ -43,6 +44,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 //Routes d'accès aux divers fonctionnalités
 app.use('/API_WEB_OCRES', routes);
+
 
 //On écoute sur le port 7010
 const PORT = 7010 || process.env.PORT;

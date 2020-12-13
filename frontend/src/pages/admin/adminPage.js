@@ -13,10 +13,11 @@ class AdminPage extends Component {
     return (
       <div className="main" style={{ backgroundColor: "#ffffff" }}>
         <div className="form-container">
-          <FormChangement />
-          <FormNouveau />
+          <FormChangement ftnFetchA={this.props.ftnFetch} />
+          <FormNouveau  ftnFetchA={this.props.ftnFetch}/>
         </div>
         <section className="right-container">
+          
           <div className="right-subcontainer">
             <ProfilTile
               key={3}
