@@ -14,7 +14,7 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-    
+    this.fetchData();
     this.state = {
       data: {
         profil: {
@@ -79,12 +79,17 @@ class App extends Component {
         console.log('yo')
         var sal=[]
         var tra=[]
+        console.log(infoPoste.poste)
         console.log(infoPoste.poste[1].trajet[0].temps)
         infoPoste.poste.forEach(element => {
           sal.push(element.salaires[0])
-          tra.push(element.trajet[0])
+          if(!element.trajet)
+          {
+            tra.push(element.trajet[0].temps)
+          }
         });
-        console.log('yo')
+        
+        
         var elemEntreprise={
           nom: infoPoste.nom,
           poste: infoPoste.poste,
@@ -92,10 +97,10 @@ class App extends Component {
           trajets:tra,
           satisfaction: infoPoste.satisfaction
         }
-        console.log('yo')
+        
         var entreprises=[];
         entreprises.push(elemEntreprise)
-        console.log('yo')
+        
         var data2 = {
           profil: infoUser,
           entreprises
