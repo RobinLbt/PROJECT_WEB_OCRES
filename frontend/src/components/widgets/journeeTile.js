@@ -37,8 +37,8 @@ class JourneeTile extends Component {
             await fetch('http://localhost:7010/API_WEB_OCRES/journe/addSatisfaction', requestOptions)
             .then( async res => {
                 const info = await res.json();
-                console.log(info);
-                this.props.ftnFetch()
+                
+               
             })
             .catch(err => console.log('soucis lors de la recuperation de la data error: '+ err))
         }catch( err){

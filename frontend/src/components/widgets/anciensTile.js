@@ -68,7 +68,7 @@ class AnciensTile extends Component {
                 <ul className="positions" >
                     {anciennes.reverse().slice(0,2).map((position,i) =>
                     <li key={position.nom}> 
-                    <p style={{color: "black",fontWeight:"500",margin:"0"}}>{position.nom} <span onClick={() =>  {this.deleteJob(position._id); this.props.ftnFetchA()}}> 🗑 </span> </p>
+                    <p style={{color: "black",fontWeight:"500",margin:"0"}}>{position.nom} <span onClick={() =>  {this.deleteJob(position._id); this.props.ftnFetchA()}} style={{marginLeft: "4.5rem"}}> 🗑 </span> </p>
                     <p style={{display:"inline-block"}}>{this.getTempsPosition(position.date,actuelles[i].date)[0]} ans {this.getTempsPosition(position.date,actuelles[i].date)[1]} mois</p>
                     <p style={{display:"inline-block",marginLeft:'0.5rem'}}>(Il y a {this.getDepuisPosition(position.date)[0]} ans et {this.getDepuisPosition(position.date)[1]} mois) </p>
                     <p></p>

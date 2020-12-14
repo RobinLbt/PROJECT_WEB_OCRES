@@ -61,7 +61,7 @@ class App extends Component {
   }
 
   async fetchData() {
-    console.log('fetch data')
+    
     try{
       var requestOptions ={
         method: "GET",
@@ -81,7 +81,9 @@ class App extends Component {
         
         var sal=[]
         var tra=[]
-        console.log(infoPoste.poste)
+
+        
+
         infoPoste.poste.forEach(element => {
           sal.push(element.salaires[0])
           if(element.trajet!=null)
