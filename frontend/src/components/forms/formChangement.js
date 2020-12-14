@@ -7,11 +7,11 @@ class FormChangement extends Component {
     this.state = {
       salaire: null,
       poste: "",
-      heure: null,
-      minute: null,
+      heure: 0,
+      minute: 0,
       idUser: "5fd3b5e35f2e56607ca733ac",
     };
-    console.log(this.state);
+    
     this.handleChangeSalaire = this.handleChangeSalaire.bind(this);
     this.handleChangePoste = this.handleChangePoste.bind(this);
     this.handleChangeHeure = this.handleChangeHeure.bind(this);
@@ -59,12 +59,18 @@ class FormChangement extends Component {
         .then(async (res) => {
           
           //APPLER LE FETCH DU APP.JS PASSER EN PROPS
-          const info = await res.json();
-          console.log(info);
+          //const info = await res.json();
+          
         })
         .catch((err) =>
           console.log("soucis lors de la recuperation de la data error: " + err)
         );
+        this.setState({
+            salaire : null,
+            poste : '',
+            heure : 0,
+            minute : 0,
+        })
     } catch (err) {
       console.log(err);
     }
@@ -80,12 +86,14 @@ class FormChangement extends Component {
               type="number"
               value={this.state.salaire}
               onChange={this.handleChangeSalaire}
+              placeholder="Salaire"
             />
             <h2>Nouveau poste</h2>
             <input
               type="text"
               value={this.state.poste}
               onChange={this.handleChangePoste}
+              placeholder="Nouveau Poste"
             />
           </div>
           <div className="form-section">

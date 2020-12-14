@@ -10,8 +10,8 @@ class FormNouveau extends Component {
             nom : '',
             salaire : null,
             poste : '',
-            heure : null,
-            minute : null,
+            heure : 0,
+            minute : 0,
             idUser: '5fd3b5e35f2e56607ca733ac',
         };
         
@@ -31,7 +31,9 @@ class FormNouveau extends Component {
 
     async submitNouveauPoste(){
         try{
-               
+            
+            
+            
             var post = {
                 nom: this.state.poste,
                 nomEntreprise : this.state.nom,
@@ -55,6 +57,14 @@ class FormNouveau extends Component {
                 console.log(info);
             })
             .catch(err => console.log('soucis lors de la recuperation de la data error: '+ err))
+
+            this.setState({
+                nom : '',
+                salaire : null,
+                poste : '',
+                heure : 0,
+                minute : 0,
+            })
         }catch( err){
             console.log(err)
         }

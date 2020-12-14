@@ -9,7 +9,6 @@ exports.newPosteEntreprise = (req, res) =>{
     var minute = parseInt(req.body.minute)
     const tempsT = 60*heure + minute;
     
-    
     const poste = new Poste({
         nom: req.body.nom,
         nomEntreprise: req.body.nomEntreprise,
@@ -107,4 +106,13 @@ exports.majPoste = (req, res) => {
 
     //Puis nous mettons à jour les infos de ce poste la 
 
+}
+
+
+exports.deletePoste = (req, res) => {
+    Poste.deleteOne({_id: ObjectID(req.body.id)})
+    .then(pRep => {
+        Salaire.deleteOne({_id: ObjectID(pRep._id)})
+        TmpTrajet.deleteOne({_id: ObjectID(pRep._id)})
+    })
 }

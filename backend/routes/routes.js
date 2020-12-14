@@ -22,7 +22,8 @@ routes.post('/user/:idUser', userData.onUser);
 routes.post('/postes/newPoste', postes.newPosteEntreprise);
 //Mise à jour poste dans la même entreprise
 routes.post('/postes/majPoste', postes.majPoste); 
-
+//Delete poste
+routes.post('/postes/delete', postes.deletePoste)
 
 //Nouveau Journée
 routes.post('/journe/addSatisfaction', satisfaction.addSatisfaction );

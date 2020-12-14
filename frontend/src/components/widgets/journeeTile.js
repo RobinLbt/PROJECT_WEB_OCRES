@@ -7,6 +7,7 @@ class JourneeTile extends Component {
         
             
         this.state = {
+           
             idUser: '5fd3b5e35f2e56607ca733ac',
         };
         
@@ -37,6 +38,7 @@ class JourneeTile extends Component {
             .then( async res => {
                 const info = await res.json();
                 console.log(info);
+                this.props.ftnFetch()
             })
             .catch(err => console.log('soucis lors de la recuperation de la data error: '+ err))
         }catch( err){

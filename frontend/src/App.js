@@ -14,8 +14,9 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-    this.fetchData();
     this.state = {
+      key1:'1',
+      key2:'2',
       data: {
         profil: {
           nom: "Labrot",
@@ -39,7 +40,7 @@ class App extends Component {
             },
            
           ],
-          trajets: [],
+          trajets: [10, 50],
           satisfaction: [
             {
               date: "2017-02-02",
@@ -51,23 +52,24 @@ class App extends Component {
         ]
       }
     }
-    
+    this.fetchData = this.fetchData.bind(this)
   }
+  
   componentDidMount(){
         this.fetchData();
        
   }
 
   async fetchData() {
+    console.log('fetch data')
     try{
       var requestOptions ={
         method: "GET",
         headers: { 
             'Accept' : 'application/json',
             'Content-Type': 'application/json',
-            //'authorization': this.state.token,
         },
-        //body: JSON.stringify(post)
+       
       };
       
       await fetch('http://localhost:7010/API_WEB_OCRES/user/allUser', requestOptions)
@@ -76,16 +78,16 @@ class App extends Component {
         const infoUser = info.infoUser;
         const infoPoste = info.infoPoste;
         
-        console.log('yo')
+        
         var sal=[]
         var tra=[]
         console.log(infoPoste.poste)
-        console.log(infoPoste.poste[1].trajet[0].temps)
         infoPoste.poste.forEach(element => {
           sal.push(element.salaires[0])
-          if(!element.trajet)
+          if(element.trajet!=null)
           {
             tra.push(element.trajet[0].temps)
+            
           }
         });
         
@@ -94,7 +96,7 @@ class App extends Component {
           nom: infoPoste.nom,
           poste: infoPoste.poste,
           salaires: sal,
-          trajets:tra,
+          trajets:tra.slice(0,3),
           satisfaction: infoPoste.satisfaction
         }
         
@@ -106,14 +108,24 @@ class App extends Component {
           entreprises
           
         }
-        //console.log(this.state)
-        console.log(data2)
-
+        var key1;
+        var key2;
+        if(this.state.key1 == '1'){
+          key1='2'
+        }else{
+          key1='1'
+        }
+        if(this.state.key1 == '2'){
+          key1='1'
+        }else{
+          key1='2'
+        }
         this.setState({
-          data : data2
-        })
+          data : data2,
+          key1: key1,
+          key2: key2
 
-        console.log(this.state)
+        })
 
       })
       .catch(err => console.log('soucis lors de la recuperation de la data error: '+ err))
@@ -133,8 +145,8 @@ class App extends Component {
           <div className="grid-container">
             <Navbar />
             
-            <Route exact path="/" render={(props) => <DashboardPage {...props} data={this.state.data} ftnFetch={this.fetchData}/>} />
-            <Route path="/admin" render={(props) => <AdminPage {...props} data={this.state.data} ftnFetch={this.fetchData}/>} />
+            <Route exact path="/" render={(props) => <DashboardPage {...props} key={this.state.key1} data={this.state.data} ftnFetch={this.fetchData}/>} />
+            <Route path="/admin" render={(props) => <AdminPage {...props} key={this.state.key2} data={this.state.data} ftnFetch={this.fetchData}/>} />
           </div>
         </div>
       </HashRouter>

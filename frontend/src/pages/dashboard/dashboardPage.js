@@ -50,11 +50,16 @@ class DashboardPage extends Component {
                             poste={this.props.data.entreprises[this.props.data.entreprises.length - 1].poste[this.props.data.entreprises[this.props.data.entreprises.length - 1].poste.length - 1]} />
                         <AnciensTile
                             positions={this.props.data.entreprises[this.props.data.entreprises.length - 1].poste}
+                            ftnFetchA={this.props.ftnFetch}
                         />
                         <SalaireTile
+                            key={this.props.data}
                             salaires={this.getSalaires()}
                         />
-                        <JourneeTile ftnFetch={this.props.ftnFetch}/>
+                        <JourneeTile 
+                            key={this.props.data.entreprises.satisfaction} 
+                            ftnFetch={this.props.ftnFetch}
+                        />
                         <SatisfactionTile
                             days={this.getSatisfaction()}
                         />
@@ -70,6 +75,7 @@ class DashboardPage extends Component {
                         />
                         <EvoTrajetTile
                             tempsTrajet={this.getTempsDeTrajet()}
+                            key={this.props.data.entreprises.trajets}
                         />
                     </div>
                 </section>

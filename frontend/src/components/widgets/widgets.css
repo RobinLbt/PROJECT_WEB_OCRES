@@ -1,108 +1,137 @@
-.emotion{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    cursor: pointer;
-    border-radius: 5rem;
-    text-align: center;
-    padding: 1rem 1rem 1rem 1rem;
-    transition-duration: 200ms;
+.emotion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 5rem;
+  text-align: center;
+  padding: 1rem 1rem 1rem 1rem;
+  transition-duration: 200ms;
 }
 
-.emotion:hover{
-    -webkit-box-shadow: 0px 4px 20px 1px rgba(39,94,246,0.14); 
-    box-shadow: 0px 4px 20px 1px rgba(39,94,246,0.14);
+.emotion:hover {
+  -webkit-box-shadow: 0px 4px 20px 1px rgba(39, 94, 246, 0.14);
+  box-shadow: 0px 4px 20px 1px rgba(39, 94, 246, 0.14);
 }
 
-.emotion:active{
-    -webkit-box-shadow: none; 
-    box-shadow: none;
-    transform: scale(0.95);
+.emotion:active {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  transform: scale(0.95);
 }
 
-.emoji{
-    margin: 0;
+.emoji {
+  margin: 0;
 }
 
-#un{
-    font-size: 4rem;
+#un {
+  font-size: 4rem;
 }
 
-#deux{
-    font-size: 4.5rem;
+#deux {
+  font-size: 4.5rem;
 }
 
-#trois{
-    font-size: 5rem;
+#trois {
+  font-size: 5rem;
 }
 
-#quatre{
-    font-size: 4.5rem;
+#quatre {
+  font-size: 4.5rem;
 }
 
-#cinq{
-    font-size: 4rem;
+#cinq {
+  font-size: 4rem;
 }
 
 /* Code provenant de: https://stackoverflow.com/questions/17629286/css-vertical-line-between-bullets-in-an-unordered-list */
 
 ul.positions li {
-    position:relative;
-    margin-bottom: 0;
-    padding-bottom: 2.5em;
-    list-style: none;
+  position: relative;
+  margin-bottom: 0;
+  padding-bottom: 2.5em;
+  list-style: none;
 }
 
 ul.positions li:after {
-    content: url('../../assets/icons/bullet.png');
-    position: absolute;
-    left: -22px; 
-    top: 0px;
+  content: url("../../assets/icons/bullet.png");
+  position: absolute;
+  left: -22px;
+  top: 0px;
 }
 
 ul.positions li:before {
-    content:"";
-    position: absolute;
-    left: -18px; /* adjust manually */
-    border-left: 4px solid #DEDEDE;
-    height: 100%;
-    width: 1px;
+  content: "";
+  position: absolute;
+  left: -18px; /* adjust manually */
+  border-left: 4px solid #dedede;
+  height: 100%;
+  width: 1px;
 }
 
 ul.positions li:first-child:before {
-   top: 6px; /* moves the line down so that it disappears under the bullet. Adjust manually */
+  top: 6px; /* moves the line down so that it disappears under the bullet. Adjust manually */
 }
 
 ul.positions li:last-child:before {
-   height: 6px; /* shorten the line so it goes only up to the bullet. Is equal to first-child:before's top */
+  height: 6px; /* shorten the line so it goes only up to the bullet. Is equal to first-child:before's top */
 }
 
-@media only screen and (max-width: 2100px){
-  
-    #un{
-        font-size: 3rem;
-    }
-    
-    #deux{
-        font-size: 3.5rem;
-    }
-    
-    #trois{
-        font-size: 4rem;
-    }
-    
-    #quatre{
-        font-size: 3.5rem;
-    }
-    
-    #cinq{
-        font-size: 3rem;
-    
+@media only screen and (max-width: 2100px) {
+  #un {
+    font-size: 3rem;
+  }
+
+  #deux {
+    font-size: 3.5rem;
+  }
+
+  #trois {
+    font-size: 4rem;
+  }
+
+  #quatre {
+    font-size: 3.5rem;
+  }
+
+  #cinq {
+    font-size: 3rem;
   }
 }
 
-@media only screen and (max-width: 800px){
-   #un,#deux,#trois,#quatre,#cinq{
-       font-size: 2rem;
-   }
+@media only screen and (max-width: 800px) {
+  #un,
+  #deux,
+  #trois,
+  #quatre,
+  #cinq {
+    font-size: 2rem;
   }
+}
+
+.close {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+}
+.close:hover {
+  opacity: 1;
+}
+.close:before,
+.close:after {
+  position: absolute;
+  left: 15px;
+  content: " ";
+  height: 33px;
+  width: 2px;
+  background-color: #333;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
